@@ -1,0 +1,23 @@
+<div>
+    <form ng-submit="addItem()">
+        <p>Item Name:<input type="text" ng-model="item.name"></p>
+        <p>Item Description:<input type="text" ng-model="item.desc"></p>
+        <input type="submit" value="Submit">
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Description</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in itemList">
+                <td>{{item.name}}</td>
+                <td>{{item.desc}}</td>
+                <td><input type="checkbox" ng-checked="item.completed"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

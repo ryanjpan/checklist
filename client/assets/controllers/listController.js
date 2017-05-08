@@ -19,7 +19,7 @@ function ListController(sc, rs){
             desc: item.desc,
             date: date,
             status: "New",
-            completed: true,
+            completed: false,
             comments: []
         };
         sc.itemList.push(itemToAdd);
